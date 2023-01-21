@@ -9,3 +9,5 @@ Feature extraction may take a long time, please be patient and save it
 
 
 Active learning module development based on modAL (https://github.com/modAL-python/modAL)
+Dataset1: FloodNet(https://github.com/BinaLab/FloodNet-Supervised_v1.0)
+Dataset2: Potsdam(https://www.isprs.org/education/benchmarks/UrbanSemLab/default.aspx)
