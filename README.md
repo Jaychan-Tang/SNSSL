@@ -3,6 +3,8 @@ Paper: Exploiting Superpixel-based Contextual Information on Active Learning for
 
 Before running, please use "pip install -r requirements.txt" to install the dependencies
 
+Run "train_floodnet.py" or "train_potsdam.py" to start active learning training
+
 When running "train_floodnet.py" or "train_potsdam.py" for the first time, please set use_Xcache=False and check all paths
 
 The labels needed for the potsdam dataset are already in data/label/, obtained by transforming the original labels
