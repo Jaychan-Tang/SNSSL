@@ -599,6 +599,7 @@ if __name__ == "__main__":
     #         if t == 10 and n != 6:
     #             print(n, t)
     #             main(n, t, seed=1)
-
-    for seed in seeds:
-        main(2, 12, seed)
+    #
+    # for seed in seeds:
+    #     main(4, 8, seed)
+    main(4, 8, seed=0)

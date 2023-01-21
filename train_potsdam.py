@@ -574,10 +574,6 @@ def main(nstage, similarity_t, seed=1):
 
 
 if __name__ == "__main__":
-    warnings.filterwarnings("ignore", category=UserWarning)
-    warnings.filterwarnings("ignore", category=Warning)
-    # 8-12完成
-    # 2_10 n=7,t=14已经是最好情况，t=16无收益
     nstage = [1, 2, 3, 4, 5, 6, 7, 8]
     similarity_t = [2, 4, 6, 8, 10, 12, 14, 16]
     seeds = [1,0,2,3,4]
@@ -592,35 +588,7 @@ if __name__ == "__main__":
     #         if t == 12 and n != 7:
     #             print(n, t)
     #             main(n, t, seed=1)
-    for seed in seeds:
-        main(2, 12, seed)
+    # for seed in seeds:
+    #     main(7, 12, seed)
+    main(7, 12, seed=0)
 
-
-# 2_10
-# N=7 T=16, XGB+BT
-# miou base/test: 0.42235638933317543 0.4922031622270812
-# overall_acc base/test: 0.7370186111111111 0.7780936388888889
-# avg_acc base/test: 0.5352835517210902 0.5983447724548819
-# N=7 T=16, SVM+MCLU
-# miou base/test: 0.3560534994417877 0.4211946628818554
-# overall_acc base/test: 0.694769 0.7371332777777778
-# avg_acc base/test: 0.4802643202058318 0.5415600932134697
-
-
-# N=7 T=18, XGB+BT
-# miou base/test: 0.42235638933317543 0.4915052415500802
-# overall_acc base/test: 0.7370186111111111 0.7752281666666667
-# avg_acc base/test: 0.5352835517210902 0.5993398919354961
-# N=7 T=18, SVM+MCLU
-# miou base/test: 0.3560534994417877 0.4211946628818554
-# overall_acc base/test: 0.694769 0.7371332777777778
-# avg_acc base/test: 0.4802643202058318 0.5415600932134697
-
-# N=8 T=18, XGB+BT
-# miou base/test: 0.42235638933317543 0.4917997370441862
-# overall_acc base/test: 0.7370186111111111 0.7749075
-# avg_acc base/test: 0.5352835517210902 0.5994301431059275
-# N=8 T=18, SVM+MCLU
-# miou base/test: 0.3560534994417877 0.421905918664561
-# overall_acc base/test: 0.694769 0.7344221388888889
-# avg_acc base/test: 0.4802643202058318 0.5430383954862827
