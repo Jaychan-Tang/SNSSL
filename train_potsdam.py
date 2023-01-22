@@ -505,8 +505,8 @@ def main(nstage, similarity_t, seed=1):
     n_queries = 1000
     onehot = False
     acc_excel = []
-    # base, ours = test_model(learner, X_raw, y_raw, oracle_pred_dict, segments, label)
-    # acc_excel.append([base, ours])
+    base, ours = test_model(learner, X_raw, y_raw, oracle_pred_dict, segments, label)
+    acc_excel.append([base, ours])
     
     if onehot == True:
         onehot_encoder = OneHotEncoder(sparse=False)
@@ -561,8 +561,8 @@ def main(nstage, similarity_t, seed=1):
             #     pred[id] = olabel
             # print(classification_report(y_raw, pred))
             # draw_prediction(segments, pred, oracle_pred_dict, '2_10MCLUOURS7-12')
-            # base, ours = test_model(learner, X_raw, y_raw, oracle_pred_dict, segments, label, 'MCLU7-12-'+str(seed))
-            # acc_excel.append([base, ours])
+            base, ours = test_model(learner, X_raw, y_raw, oracle_pred_dict, segments, label, 'MCLU7-12-'+str(seed))
+            acc_excel.append([base, ours])
     np.save('slic2_cache/potsdam/2_10/model_save/svm/' + 'seed' + str(seed) + '-chosen_ids-' + str(0) + '.npy',
             arr=np.array(chose_ids))
     # init_sample_visualization(img, segments, train_idx)

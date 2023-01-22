@@ -506,8 +506,8 @@ def main(nstage, similarity_t, seed):
     acc_excel = []
     models = []
 
-    # base, ours = test_model(learner, X_raw, y_raw, oracle_pred_dict, segments, label)
-    # acc_excel.append([base, ours])
+    base, ours = test_model(learner, X_raw, y_raw, oracle_pred_dict, segments, label)
+    acc_excel.append([base, ours])
     
     onehot = False
     if onehot == True:
@@ -561,11 +561,7 @@ def main(nstage, similarity_t, seed):
             model_saved = learner
             query_num = idx + 1
             max_acc = model_accuracy
-        # if idx % 10 == 0:
-        #     print('Accuracy after query {n}: {acc:0.4f}'.format(n=idx + 1, acc=model_accuracy), end='    ')
-        #     predictions = learner.predict(X_raw)
-        #     bin = np.bincount((predictions == y_raw))
-        #     print('correct:', bin[1], 'wrong:', bin[0])
+        
         if (idx+1) % 20 == 0:
             print(idx+1)
             learner.save('cache/floodnet/7577/model_save/xgb_random/', 'seed' + str(seed) + '-model-' + str(idx + 1))
